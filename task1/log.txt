@@ -1,0 +1,11 @@
+commit 9d8108f8421e07fcbbd2b7907776597413525150
+Author: Ilya <lyah.ilya88@gmail.com>
+Date:   Tue Feb 12 15:13:40 2019 +0300
+
+    add status.txt
+
+commit 0b8feeb66b8a17992977da5ffb937e9205c4f6a7
+Author: Ilya <lyah.ilya88@gmail.com>
+Date:   Tue Feb 12 15:10:33 2019 +0300
+
+    add .gitignore
