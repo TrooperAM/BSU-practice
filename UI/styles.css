@@ -1,0 +1,253 @@
+h1{
+    color: black;
+    margin-top: 0%;
+    margin-left: 40%;
+    font-family: "Amatic SC";
+    font-size: 400%;
+    font-weight: bold; 
+    
+}
+body{
+    background-color: white;
+}
+#menuha{
+    color: black;
+    font-family: "Amatic SC";
+    margin-right: 5%;
+    font-size: 160%;
+    position: absolute; top: 0%; right: 15%;
+    font-weight: bold;
+}
+#user{
+   width: 200px;
+   height: 47px;
+   position: absolute; top: 20%; left: 14%;
+    text-align: left;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Amatic SC";
+  }
+#leftpick{
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%; 
+}
+#post{
+   margin-top: 0%;
+   margin-left: 2%;
+}
+
+#logo{
+    float: left;
+    margin-top: 0%;
+    margin-left: 10%;
+}
+.profile{
+    margin-top: 5%;
+    margin-right: 0%;
+    float: right;
+}
+* { margin:0; } 
+body {
+    height: 100%; min-width:900px;
+    background: url(img/feed.jpg) no-repeat;
+    background-size: 100%
+     }
+html {
+    position:relative; min-height:100%;
+     } 
+#container {
+    padding-bottom: 100px;
+        } 
+#footer {
+    text-align: center; 
+    height: auto;
+    background:gray;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+    font-family: "Amatic SC";
+    font-size: 200%;
+   } 
+#tags{
+    margin-top: 0%;
+    margin-left: 2%;
+    border: 1px solid black;
+    width: 300px;
+    height: 27px;
+    border-radius: 12px ;
+    font-size: 115%;
+    font-family: "Amatic SC";
+}
+.desc{
+    margin-top: 1%;
+    margin-left: 2%;
+    border: 1px solid black;
+    width: 300px;
+    height: 27px;
+    border-radius: 12px ;
+    font-size: 115%;
+    font-family: "Amatic SC";
+}
+.comments{
+    float: right;
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    font-size: 50px; 
+    font-family: "Amatic SC";
+}
+.yourcomm{
+    float:left;
+    margin-top: 42%;
+    width: 300px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 52%;
+    font-family: "Amatic SC";
+}
+.post{
+    background: white;
+    margin-top: 8%;
+    margin-left: 9%;
+    width: 800px;
+    height: 465px;
+    border:1px solid black;
+}
+.send{
+    margin-top: 43%;
+    margin-right: 5%;
+    float: left;
+}
+.like{
+    background: url(img/like.png) no-repeat ;
+    height: 9%;
+    width: 5%;
+    margin-top: 1%;
+    margin-left: 48%;
+    float: left;
+}
+
+.edit{
+    margin-top: 5px;
+    margin-left: 0%;
+    
+}
+.delete{
+    margin-top: 5px;
+    margin-left: 0%; 
+}
+.username
+{
+    font-family: "Amatic SC";
+    margin-top:7px;
+    float: left;
+    font-size: 20px;
+    margin-left: 3%;
+}
+.datapost
+{
+    font-family: "Amatic SC";
+    margin-top:12px;
+    font-size: 20px;
+    margin-right: 7% ;
+}
+header{
+    float: none;
+    height: auto;
+    width: 100%;
+}
+a.button15 {
+    margin-bottom: 10%;
+    margin-left: 40%;
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(68,68,68);
+    text-decoration: none;
+    user-select: none;
+    padding: .2em 1.2em;
+    outline: none;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all .218s ease 0s;
+  }
+  a.button15:hover {
+    color: rgb(24,24,24);
+    border: 1px solid rgb(198,198,198);
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  }
+  a.button15:active {
+    color: rgb(51,51,51);
+    border: 1px solid rgb(204,204,204);
+    background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+    box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+  }
+  main{
+    float: none;
+    height: auto;
+    width: 100%;
+  }
+  footer{
+    float: none;
+    height: auto;
+    width: 100%;
+  }
+  .search {
+    width: 35%;
+   margin-left: 15%;
+  margin-top: 5%;
+  } 
+  .search input {
+    border: none;
+  }
+  .search .input {
+    width: 100%;
+    padding: 8px 37px 9px 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background: #EEE;
+    font: 13px "Amatic SC", Arial, sans-serif;
+    color: #555;
+    outline: none;
+  }
+  .search .input:focus {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #E8E8E8;
+    color: #333;
+  }
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+  #date{
+    width: 40%;
+    padding: 8px 37px 9px 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background: #EEE;
+    font: 13px "Amatic SC", Arial, sans-serif;
+    color: #555;
+    outline: none;
+  }
+  form{
+    font-family: "Amatic SC";
+    font-weight: bold;
+  }
+  .srchbtn{
+    font-family: "Amatic SC";
+    width: 45%;
+    margin-left: 22%; 
+    margin-top: 2%
+  }
+  
