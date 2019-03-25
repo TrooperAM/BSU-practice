@@ -6,16 +6,16 @@ var photoPosts = [
     author: 'Петров Иван',
     hashTags:['#wwww','#maz','#sas'],
     likes:['Чумак Христина','Права Ева ','Пархоменко Нина '],
-    photoLink: 'https://files.adme.ru/files/news/part_82/823460/preview-23858515-650x341-98-1484579537.jpg'
+    photoLink: 'https://files.adme.ru/files/news/part_82/823460/11653110-Unknown-2-650-56828c05fc-1484579537.jpg'
     },
     {
     id: '2',
-    descriprion: 'Женская сборная Беларуси выиграла эстафету в рамках соревнований по биатлону на Олимпийских играх в Пхёнчхане!!!',
+    descriprion: 'Женская сборная Беларуси выиграла эстафету!!!',
     createdAt: new Date('2018-02-23T23:00:00'),
     author: 'Иванов Иван',
     hashTags:['#china','#biathlon','#belarus'],
     likes:['Чумак Христина','Права Ева ','Пархоменко Нина ','Петров Иван'],
-    photoLink: 'http://ont.by/webroot/delivery/files/news/2018/02/22/Dom.jpg'
+    photoLink: 'https://files.adme.ru/files/news/part_82/823460/11653110-Unknown-2-650-56828c05fc-1484579537.jpg'
     },
     {id: '3',
     descriprion: 'Семья Шрека и Фионы',
@@ -237,7 +237,7 @@ class PostCollection{
            return sortedPosts=_filterHelper[field](sortedPosts,filterConfig[field]);
         });
         sortedPosts.sort(function compareDates(a,b){
-            return a.createdAt-b.createdAt;
+            return b.createdAt-a.createdAt;
         });
         sortedPosts.splice(0,skip);
         sortedPosts.splice(top,sortedPosts.length);
@@ -281,14 +281,20 @@ class PostCollection{
     let pos=this._photoPosts.findIndex(function(item){
         return item.id===id;
         });
-    console.log(Object.keys(post));
+        post.createdAt=new Date();
+        console.log(post.createdAt);
         if(photoPost.descriprion!==null){
             post.descriprion=photoPost.descriprion;
         }
         if(photoPost.photoLink!==null){
             post.photoLink=photoPost.photoLink;
+            post.likes=[];
         }
-        console.log(Object.keys(post));
+        if(!!photoPost.hashTags){
+            post.hashTags=photoPost.hashTags;
+        } else { 
+            post.hashTags=[];
+        }
         if(PostCollection.validate(post)){
            this. _photoPosts.splice(pos,1,post);
         return true;
@@ -311,19 +317,19 @@ class PostCollection{
    }
 }
 
-var I = new PostCollection(photoPosts);
-console.log(PostCollection.validate({descriprion:"zxcvasdf" ,photoLink: 'http://haradok.info/static/news/5/4565/preview.jpg'}));
-console.log(I.getPage(10, 10));
-console.log(I.getPage(0, 10, {author: 'Чумак Христина'}));
-console.log(I.getPost('27'));
-console.log(I.removePost('28'));
-console.log(I);
-console.log(I.addPost({id:'1',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//false
-console.log(I.addPost({id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//true
-console.log(I.editPost('1', {descriprion:"zxcvasdf" ,photoLink: 'http://haradok.info/static/news/5/4565/preview.jpg' }));
-console.log(I);
-console.log(I.addAll([{id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},{id:'668',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},
-{id:'669',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}]));
-console.log(I);
-console.log(I.removePost('12'));
-console.log(I);
+// var I = new PostCollection(photoPosts);
+// console.log(PostCollection.validate({a:0}));
+// console.log(I.getPage(10, 10));
+// console.log(I.getPage(0, 10, {author: 'Чумак Христина'}));
+// console.log(I.getPost('27'));
+// console.log(I.removePost('28'));
+// console.log(I);
+// console.log(I.addPost({id:'1',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//false
+// console.log(I.addPost({id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//true
+// console.log(I.editPost('1', {descriprion:"zxcvasdf" ,photoLink: 'http://haradok.info/static/news/5/4565/preview.jpg' }));
+// console.log(I);
+// console.log(I.addAll([{id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},{id:'668',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},
+// {id:'669',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}]));
+// console.log(I);
+// console.log(I.removePost('12'));
+// console.log(I);
