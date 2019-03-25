@@ -59,6 +59,7 @@ html {
      } 
 #container {
     padding-bottom: 100px;
+    list-style-type: none;
         } 
 #footer {
     text-align: center; 
@@ -165,7 +166,7 @@ a.button15 {
     margin-bottom: 10%;
     margin-left: 40%;
     display: inline-block;
-    font-family: arial,sans-serif;
+    font-family: "Amatic SC";
     font-size: 30px;
     font-weight: bold;
     color: rgb(68,68,68);
@@ -249,5 +250,9 @@ a.button15 {
     width: 45%;
     margin-left: 22%; 
     margin-top: 2%
+  }
+  user{
+    margin-top: 20%;
+    margin-left: 15%;
   }
   
