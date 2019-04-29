@@ -161,46 +161,35 @@ var photoPosts = [
     likes:['Чумак Христина','Права Ева ','Пархоменко Нина '],
     photoLink: 'https://files.adme.ru/files/news/part_82/823460/11656310-6952560-R3L8T8D-650-114-44-650-74abb3f7e3-1484579537.jpg'
     },];
-
+var MAX_LEN=200;
 class PostCollection{
    constructor(photoPosts){
       this._photoPosts=photoPosts||[];
    }
    static _validateHelper={
-    id: function(id){
-        if(!!id && typeof(id)==='string' && !(/[^0-9]/.test(id))){
-        return true;
-       } else{
-            return false;
-       }
-    },
-    descriprion: function(descriprion){
-        if(!!descriprion && descriprion.length<=200){
-            return true;
-        } else{
-            return false;
-        }
-    },
-   createdAt: function(createdAt){
-       if(!!createdAt && createdAt instanceof Date){
+       id: function(id){
            return true;
-       } else {
-           return false;
-       }
-   }, 
+       },
+       createdAt: function(createdAt){
+           return true;
+       },
+    descriprion: function(descriprion){
+        if(!!descriprion && descriprion.length <= MAX_LEN){
+            return true;
+        } 
+            return false;
+    }, 
    author: function(author){
        if(!!author && typeof(author)==='string'){
            return true;
-       } else {
-           return false;
        }
+       return false;
    },
    photoLink: function(photoLink){
        if(!!photoLink && typeof(photoLink)==='string'){
            return true;
-       } else {
+       } 
            return false;
-       }
    },
    hashTags: function(hastags){
        return true;
@@ -213,7 +202,7 @@ class PostCollection{
     let _filterHelper={
         author: function(list,author){
            return list.filter(function(item){
-                return item.author===author;
+                return item.author.includes(author);
             });
         },
         from: function(list,from){
@@ -228,7 +217,7 @@ class PostCollection{
         },
         hashTags: function(list,hashTags){
             return list.filter(function(item){
-             return item.hashTags.some(tag => hashTags.indexOf(tag)>=0);
+             return item.hashTags.some((tag) => {return hashTags.indexOf(tag)>=0});
             });
         }
        }
@@ -266,7 +255,9 @@ class PostCollection{
     return post || false;
    }
    addPost(photoPost){
-    if(PostCollection.validate(photoPost)&& !this._photoPosts.some(item => item.id===photoPost.id)){
+       photoPost.createdAt=new Date();
+       photoPost.id=photoPost.createdAt.getMilliseconds().toString();
+    if(PostCollection.validate(photoPost)&& !this._photoPosts.some((item) => {item.id===photoPost.id})){
         photoPost.likes=[];
         this._photoPosts.push(photoPost);
         return true;
@@ -282,11 +273,10 @@ class PostCollection{
         return item.id===id;
         });
         post.createdAt=new Date();
-        console.log(post.createdAt);
-        if(photoPost.descriprion!==null){
+        if(!!photoPost.descriprion){
             post.descriprion=photoPost.descriprion;
         }
-        if(photoPost.photoLink!==null){
+        if(!!photoPost.photoLink){
             post.photoLink=photoPost.photoLink;
             post.likes=[];
         }
@@ -307,13 +297,34 @@ class PostCollection{
      if(pos>=0){
      this._photoPosts.splice(pos,1);
      return true;
-    } else return false;
-   }
+    } else {
+        return false;
+    }
+    }
    addAll(posts){
-       posts.forEach(item => this.addPost(item));
+       posts.forEach((item) => {this.addPost(item);});
    }
    clear(){
        this._photoPosts.splice(0,this._photoPosts.length);
+   }
+   save(user)
+   {
+      let strPosts = "[";
+      this._photoPosts.forEach(element => {
+         strPosts += JSON.stringify(element) + ',';
+      });
+      strPosts += "]";
+      strPosts = strPosts.replace(",]","]");
+      localStorage.setItem(user + "posts",strPosts);
+   }
+   restore(user)
+   {
+      let posts = localStorage.getItem(user + "posts");
+      return JSON.parse(posts,function(key,value)
+      {
+         if(key == 'createdAt'){return new Date(value);}
+         return value;
+      });
    }
 }
 
@@ -324,12 +335,13 @@ class PostCollection{
 // console.log(I.getPost('27'));
 // console.log(I.removePost('28'));
 // console.log(I);
-// console.log(I.addPost({id:'1',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//false
+// console.log(I.addPost({author:'fghj',descriprion:'rtyu',photoLink:'fghj'}));//false
+// console.log(I);
 // console.log(I.addPost({id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}));//true
 // console.log(I.editPost('1', {descriprion:"zxcvasdf" ,photoLink: 'http://haradok.info/static/news/5/4565/preview.jpg' }));
 // console.log(I);
-// console.log(I.addAll([{id:'666',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},{id:'668',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()},
-// {id:'669',author:'fghj',descriprion:'rtyu',photoLink:'fghj',createdAt: new Date()}]));
+// console.log(I.addAll([{author:'fghj',descriprion:'rtyu',photoLink:'fghj'},{author:'fghj',descriprion:'rtyu',photoLink:'fghj'},
+// {author:'fghj',descriprion:'rtyu',photoLink:'fghj'}]));
 // console.log(I);
 // console.log(I.removePost('12'));
 // console.log(I);
