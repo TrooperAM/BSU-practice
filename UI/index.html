@@ -7,36 +7,48 @@
     <link href="styles.css" rel="stylesheet" type="text/css"> 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet"> 
 </head>
-  <body>
-    <header id="head">
-    <!-- <img src="img/logo.png" width="100" id="logo">
-    <div id="menuha">
-      <img src="img/profile.png" width="25" class="profile">
-       Username <br>
-       <button type="button" style="font-family: Amatic SC" onclick="setView('ALLAH');">Add new post</button>
-      <button type="button" style="font-family: Amatic SC" onclick="showAll();">Log out</button>
-   </div>  
-        <h1>
-          <i><strong>Feed</strong></i>
-        </h1>
-        <form action="" method="post" class="search">
-            <input type="search" name="" placeholder="Username" class="input" />
-            <input type="search" name="" placeholder="#tags" class="input" />
-            From:<input type="date" id="date" name="from"/>
-            To:<input type="date" id="date" name="to"/>
-            <button type="button" class="srchbtn" >Search</button>
-          </form> -->
-    </header>
+  <body >
+      <div id="sign">
+      <img src="img/logo.png" width="100" >
+      <h1>
+              <strong>Authorization</strong>
+            </h1>
+  <form action="" method="post" name="test" id="login" >
+      <label for="name">Username:</label>
+      <input type="text" name="name" placeholder="Nickname" id="name"><br>
+      <label for="password">Password:  </label>
+      <input type="password" name="password" placeholder="Password" id="password"><br>
+      <input type="button" name="submit" value="Log in" id="submit">
+  </form>
+</div>
+<header id="head">
+</header>
+<div id="addPost" class="noone">
+    <img src="img/logo.png" width="100" >
+    <h1>
+            <strong>New Post</strong>
+          </h1>
+  <form action="" method="post" name="test" id="addPostss" >
+    <label for="name">Description:</label>
+    <input type="text" name="descr" placeholder="Description" id="descr"><br>
+    <label for="password">Tags :  </label>
+    <input type="text" name="tags" placeholder="Your tags" id="tag"><br>
+    <input type="file" name="photoLink" placeholder="Photo" id="photoLink">
+    <input type="button" name="submit" value="Add" id="added">
+    <img src="img/photo.jpg"  class="defimg" id="preview">
+</form>
+</div>
+    
 <main>
 <ul id="container">
 </ul> 
-<a href="" class="button15">Load more</a>
+<button type="button" id="loadMore" class="noone">Load more</button>
 </main>
 <footer>
-   <div id="footer"> <p>&copy; PhP Author:Lyah Ilya 5gr 2c Email:lyah.ilya88@gmail.com Last edited: 03.03.2019 20:00</p> </div>
+   <div id="footer"> <p>&copy; PhP Author:Lyah Ilya 5gr 2c Email:lyah.ilya88@gmail.com Last edited: 08.04.2019 09:17</p> </div>
 </footer>
 <script src="View.js"></script>
-<script src="posts.js"></script>
+<script src="postsCol.js"></script>
 <script src="global.js"></script>
   </body>
 </html>
