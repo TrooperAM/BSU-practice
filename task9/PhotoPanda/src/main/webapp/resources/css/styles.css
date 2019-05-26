@@ -1,0 +1,291 @@
+h1{
+    color: black;
+    margin-top: 0%;
+    margin-left: 40%;
+    font-family: "Amatic SC";
+    font-size: 400%;
+    font-weight: bold; 
+    
+}
+body{
+    background-color: white;
+}
+#menuha{
+    color: black;
+    font-family: "Amatic SC";
+    margin-right: 5%;
+    font-size: 160%;
+    position: absolute; top: 0%; right: 15%;
+    font-weight: bold;
+}
+#user{
+   width: 200px;
+   height: 47px;
+   position: absolute; top: 20%; left: 14%;
+    text-align: left;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Amatic SC";
+  }
+#leftpick{
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%; 
+    width:6%;
+    height:10%;
+}
+#post{
+   margin-top: 0%;
+   margin-left: 2%;
+}
+
+#logo{
+    float: left;
+    margin-top: 0%;
+    margin-left: 10%;
+}
+.profile{
+    margin-top: 5%;
+    margin-right: 0%;
+    float: right;
+}
+* { margin:0; } 
+body {
+    height: 100%; min-width:900px;
+    background: url(feed.jpg) no-repeat;
+    background-size: 100%
+     }
+html {
+    position:relative; min-height:100%;
+     } 
+#container {
+    padding-bottom: 100px;
+    list-style-type: none;
+        } 
+#footer {
+    text-align: center; 
+    height: auto;
+    background:gray;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+    font-family: "Amatic SC";
+    font-size: 200%;
+   } 
+#tags{
+    margin-top: 0%;
+    margin-left: 2%;
+    border: 1px solid black;
+    width: 300px;
+    height: 27px;
+    border-radius: 12px ;
+    font-size: 115%;
+    font-family: "Amatic SC";
+}
+.desc{
+    margin-top: 1%;
+    margin-left: 2%;
+    border: 1px solid black;
+    width: 300px;
+    height: 27px;
+    border-radius: 12px ;
+    font-size: 115%;
+    font-family: "Amatic SC";
+}
+.comments{
+    float: right;
+    margin-top: 3%;
+    margin-right: 4%;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    font-size: 50px; 
+    font-family: "Amatic SC";
+}
+.yourcomm{
+    float:left;
+    margin-top: 42%;
+    width: 300px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 52%;
+    font-family: "Amatic SC";
+}
+.post{
+    background: white;
+    margin-top: 8%;
+    margin-left: 9%;
+    width: 800px;
+    height: 465px;
+    border:1px solid black;
+}
+.send{
+    margin-top: 43%;
+    margin-right: 5%;
+    float: left;
+}
+.like,.ed,.del{
+    height: 25%;
+    width: 10%;
+    font: 13px "Amatic SC";
+    border-radius: 12px;
+    border: 1px solid black;
+}
+.username
+{
+    font-family: "Amatic SC";
+    margin-top:7px;
+    float: left;
+    font-size: 20px;
+    margin-left: 3%;
+}
+.datapost
+{
+    font-family: "Amatic SC";
+    margin-top:12px;
+    font-size: 20px;
+    margin-right: 7% ;
+}
+header{
+    float: none;
+    height: auto;
+    width: 100%;
+}
+  main{
+    float: none;
+    height: auto;
+    width: 100%;
+  }
+  footer{
+    float: none;
+    height: auto;
+    width: 100%;
+  }
+  .search {
+    width: 35%;
+   margin-left: 15%;
+  margin-top: 5%;
+  } 
+  .search input {
+    border: none;
+  }
+  .search .input {
+    width: 100%;
+    padding: 8px 37px 9px 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background: #EEE;
+    font: 13px "Amatic SC", Arial, sans-serif;
+    color: #555;
+    outline: none;
+  }
+  .search .input:focus {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #E8E8E8;
+    color: #333;
+  }
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+  #date{
+    width: 40%;
+    padding: 8px 37px 9px 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background: #EEE;
+    font: 13px "Amatic SC", Arial, sans-serif;
+    color: #555;
+    outline: none;
+  }
+  form{
+    font-family: "Amatic SC";
+    font-weight: bold;
+
+  }
+  .srchbtn{
+    font-family: "Amatic SC";
+    width: 45%;
+    margin-left: 22%; 
+    margin-top: 2%
+  }
+  user{
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+input{
+  font-family: "Amatic SC";
+    font-weight: bold;
+}  
+#login{
+  display: block;
+  margin-left: 15%;
+  margin-top: 15%;
+} 
+input#name,input#password{
+  width: 100%;
+    padding: 8px 37px 9px 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background: #EEE;
+    font: 13px "Amatic SC", Arial, sans-serif;
+    color: #555;
+    outline: none;
+  width: 25%;
+}
+
+input#submit,input#added{
+  width: 15%;
+  margin-top: 2%;
+  margin-left:7%;
+  border-radius: 12px;
+    border: 1px solid black;
+}
+#addPost{
+  margin-top: 0%;
+  margin-left: 5%;
+}
+input#tag{
+  margin-left: 4%;
+  margin-top: 2%;
+  width: 25%;
+}
+input#descr{
+  margin-left: 1%;
+  width: 25%;
+}
+.noone{
+  display: none;
+}
+.show{
+  display: block;
+}
+#photoLink{
+  font-family: "Amatic SC";
+  border-radius: 12px;
+  border: 1px solid black;
+}
+.defimg{
+  width: 30%;
+  height: 10%;
+  margin-right:100%;
+  margin-top: 5%;
+}
+#loadMore{
+  margin-bottom: 10%;
+  font-family: "Amatic SC";
+  margin-left:  50%;
+  width: 10%;
+  height: 20%;
+}
+.controll-buttons{
+  margin-top: 5%;
+  margin-left: 2%;
+}

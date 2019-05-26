@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+<div id="sign">
+    <img src="img/logo.png" width="100">
+    <h1>
+        <strong>Authorization</strong>
+    </h1>
+    <form action="" method="post" name="test" id="login">
+        <label for="name">Username:</label>
+        <input type="text" name="name" placeholder="Nickname" id="name"><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Password" id="password"><br>
+        <input type="button" name="submit" value="Log in" id="submit">
+    </form>
+</div>
+<header id="head">
+</header>
+<div id="addPost" class="noone">
+    <img src="img/logo.png" width="100">
+    <h1>
+        <strong>New Post</strong>
+    </h1>
+    <form action="" method="post" name="test" id="addPostss">
+        <label for="name">Description:</label>
+        <input type="text" name="descr" placeholder="Description" id="descr"><br>
+        <label for="password">Tags : </label>
+        <input type="text" name="tags" placeholder="Your tags" id="tag"><br>
+        <input type="file" name="photoLink" placeholder="Photo" id="photoLink">
+        <input type="button" name="submit" value="Add" id="added">
+        <img src="img/photo.jpg" class="defimg" id="preview">
+    </form>
+</div>
+
+<main>
+    <ul id="container">
+    </ul>
+    <button type="button" id="loadMore" class="noone">Load more</button>
+</main>
+<footer>
+    <div id="footer"><p>&copy; PhP Author:Lyah Ilya 5gr 2c Email:lyah.ilya88@gmail.com Last edited: 26:05:2019 09:17</p>
+    </div>
+</footer>
+<script src="resources/js/View.js"></script>
+<script src="resources/js/postsCol.js"></script>
+<script src="resources/js/global.js"></script>
+</body>
+</html>
